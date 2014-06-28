@@ -1,0 +1,23 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  confirmation: "Are you sure?"
+  back: "Back"
+  site_name: "Remote Health Monitoring System"
+  measurement_history: "Measurement History"
+  female: "Female"
+  male: "Male"
+
+  add: "Add"
+  adding: "Adding..."
+  destroy: "Delete"
+  edit: "Edit"
+  new: "New"
+  show: "Show"
+  update: "Update"
+
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Update %{model}"

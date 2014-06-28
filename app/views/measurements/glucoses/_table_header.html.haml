@@ -1,0 +1,5 @@
+%thead
+  %tr
+    - %w(measured_at value state).each do |attr|
+      %th= Measurements::Glucose.human_attribute_name(attr)
+    %th

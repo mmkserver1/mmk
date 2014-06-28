@@ -1,0 +1,8 @@
+ru:
+  measurement_thresholds:
+    index:
+      title: "Список границ измерений"
+    new:
+      title: "Создать %{threshold}"
+    edit:
+      title: "Редактировать %{threshold}"

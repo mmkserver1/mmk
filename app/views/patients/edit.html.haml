@@ -1,0 +1,7 @@
+%h1= t(".title")
+= render 'form'
+= link_to t(:show), @patient
+= link_to t(:edit), edit_patient_path(@patient)
+= link_to t(:destroy), @patient, :confirm => t(:confirmation), :method => :delete
+|
+= link_to t(:back), patients_path

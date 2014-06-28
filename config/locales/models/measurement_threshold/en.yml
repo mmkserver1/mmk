@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    errors:
+      models:
+        measurement_threshold:
+          attributes:
+
+    models:
+      measurement_threshold:
+
+    attributes:
+      measurement_threshold:
+        created_at: "Setting Time"

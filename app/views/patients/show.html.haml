@@ -1,0 +1,61 @@
+%div{ :style => "height:10px" }
+= link_to patients_path, :style => "text-decoration:none" do
+  .default_button{:style => "margin:auto"}= t(".to_patients_list")
+.patient_info_header_top
+.patient_info_header_middle
+  .patient_info_photo= image_tag 'default_avatar_male_120x160.png' ,:width=>120, :height=>160
+  .patient_info_row
+    .patient_info_label{ :style => "font-size:22px" }= t('.patient')
+    .patient_info_value{ :style => "font-size:22px" }= @patient
+    .clear
+  - if @patient.birthday
+    .patient_info_row
+      .patient_info_label= t('.age')
+      .patient_info_value= "#{age(@patient.birthday)} #{t(".birth_year", :year => @patient.birthday.year)}"
+      .clear
+  .patient_info_row
+    .patient_info_label= t('.email')
+    .patient_info_value= auto_link(@patient.email)
+    .clear
+.patient_info_header_bottom
+
+%div{ :style => "height:14px" }
+= render "blood"
+%div{ :style => "height:20px" }
+= render "temperature"
+%div{ :style => "height:20px" }
+= render "glucose"
+%div{ :style => "height:20px" }
+= render "cardio"
+
+:javascript
+  $(function () {
+      application.poolNotifications(#{Time.zone.now.to_i}, #{@patient.id});
+      $("#bloodpressures_graph, #temperatures_graph, #glucoses_graph").live("plothover", function (event, pos, item) {
+      function showTooltip(x, y, contents) {
+        $('<div id="tooltip">' + contents + '</div>').css( {
+            position: 'absolute',
+            display: 'none',
+            top: y + 5,
+            left: x + 5,
+            border: '1px solid #fdd',
+            padding: '2px',
+            'background-color': '#fee',
+            opacity: 0.80
+        }).appendTo("body").fadeIn(100);
+        }
+        var previousPoint = null;
+        $("#x").text(pos.x.toFixed(2));
+        $("#y").text(pos.y.toFixed(2));
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+                    $("#tooltip").remove();
+                    var x = item.datapoint[0].toFixed(2),
+                        y = item.datapoint[1].toFixed(2);
+                    showTooltip(item.pageX, item.pageY,
+                                item.series.label + " = " + y);
+                }
+            }
+    });
+  });

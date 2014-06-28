@@ -1,0 +1,28 @@
+ru:
+  activerecord:
+    errors:
+      messages:
+      models:
+        user:
+          attributes:
+            email:
+              taken: ' %{value} уже используется в системе'
+              blank: 'должна быть указана'
+            password:
+              too_short: "Слишком короткий пароль"
+              blank: "не может быть пустым"
+    models:
+      user:
+      patient: "пациент"
+    attributes:
+      user:
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        birthday: "Дата рождения"
+        first_name: "Имя"
+        middle_name: "Отчество"
+        last_name: "Фамилия"
+        gender: "Пол"
+        phone: "Номер телефона"
+        current_password: "Текущий пароль"

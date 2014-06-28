@@ -1,0 +1,13 @@
+%tbody
+  %tr
+    .message
+    %div{:style => "padding-bottom:20px"}
+    %div= l(item.measured_at, :format => :long)
+    - cardiograms = (1..4).select { |i| item.cardiogram?(i) }
+    - cardiograms.each do |i|
+      %div{:id => "cardiogram_graph_#{i}_#{item.id}", :style => "width:705px;height:200px"}
+      :javascript
+        $.plot($("#cardiogram_graph_#{i}_#{item.id}"),[
+          {color:"blue",data: #{item.cardiogram(i).to_json},lines: { show: true }, points: { show: false }}],
+          {series: { shadowSize: 0 },zoom: {interactive: false}, pan: {interactive: true}, yaxis:{ min:1500, max:2500,  tickSize: 20, tickFormatter:function (val,axis){return '';}},xaxis:{ tickSize: 40, tickFormatter:function (val,axis){return '';} } }
+        );

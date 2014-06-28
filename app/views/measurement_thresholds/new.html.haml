@@ -1,0 +1,3 @@
+%h1= t(".title", :threshold => @measurement_threshold.class.model_name.human.mb_chars.downcase.to_s)
+= render 'form'
+= link_to t(:back), :back

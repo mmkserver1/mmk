@@ -1,0 +1,12 @@
+ru:
+  home:
+    doctor:
+      title: "Ваши пациенты"
+    patient:
+      title: "Ваши измерения"
+      cardio: "Кардиограмма"
+      bloodpressure: "Артериальное давление"
+      temperature: "Температура"
+      glucose: "Содержание сахара в крови"
+      oxygen: "Содержание кислорода в крови"
+      weight: "Вес тела"

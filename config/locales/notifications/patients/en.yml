@@ -1,0 +1,5 @@
+en:
+  notifications:
+    patients:
+      create_success: "Patient was successfully created."
+      update_success: "Patient data was successfully updated."

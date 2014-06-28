@@ -1,0 +1,21 @@
+%h1= t(".title")
+%table
+  %thead
+    %tr
+      - %w(desc level patient doctor).each do |attr|
+        %th= Notification.human_attribute_name(attr)
+      %th
+      %th
+      %th
+  %tbody
+    - @notifications.each do |notification|
+      %tr
+        %td= notification.desc
+        %td= notification.level
+        %td= notification.patient
+        %td= notification.doctor
+        %td= link_to t(:show), notification
+        %td= link_to t(:edit), edit_notification_path(notification)
+        %td= link_to t(:destroy), notification, :confirm => t(:confirmation), :method => :delete
+%br/
+= link_to t(:new), new_notification_path

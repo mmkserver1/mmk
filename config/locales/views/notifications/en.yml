@@ -1,0 +1,8 @@
+en:
+  notifications:
+    index:
+      title: "Notifications List"
+    new:
+      title: "Create Notification"
+    edit:
+      title: "Edit Notification"

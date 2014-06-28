@@ -1,0 +1,26 @@
+%div{:style => "height:14px"}
+%div{:style => "margin-left:30px;float:left"}
+  = link_to new_patient_path, :style => "text-decoration:none" do
+    .default_button= t(".new")
+%div{:style => "margin-left:30px;float:left"}
+  = link_to patients_path(:sort=>"name"), :style => "text-decoration:underline" do
+    %div= t(".sort_by_name")
+%div{:style => "margin-left:30px;float:left"}
+  = link_to patients_path, :style => "text-decoration:underline" do
+    %div= t(".sort_by_date")
+.clear
+.patient_list
+  - @patients.each do |patient|
+    .patient_list_row{:style => "background:#{get_status_color(patient)}"}
+      = link_to patient, :style => "display:block;float:left" do
+        .patient_list_image_box
+          = image_tag 'default_avatar_male_120x160.png' ,:width=>54, :height=>74
+        .patient_list_info_box
+          = patient
+          %br/
+          = t(".birth_year", :year => patient.birthday.try(:year))
+          %div{:style => "font-size:16px"}
+            = patient.bloodpressures.order('measured_at desc').first
+      .patient_list_action_box{:style => "float:right;"}
+        = link_to t(".unlist"), unlist_patient_path(patient)
+    

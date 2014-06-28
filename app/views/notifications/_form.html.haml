@@ -1,0 +1,24 @@
+= form_for(@notification) do |f|
+  - if @notification.errors.any?
+    #error_explanation
+      %ul
+        - @notification.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :desc
+    %br/
+    = f.text_area :desc
+  .field
+    = f.label :level
+    %br/
+    = f.text_field :level
+  .field
+    = f.label :patient
+    %br/
+    = f.text_field :patient
+  .field
+    = f.label :doctor
+    %br/
+    = f.text_field :doctor
+  .actions
+    = f.submit

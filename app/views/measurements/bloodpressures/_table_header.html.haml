@@ -1,0 +1,5 @@
+%thead
+  %tr
+    - %w(measured_at max min pulse).each do |attr|
+      %th= Measurements::Bloodpressure.human_attribute_name(attr)
+    %th

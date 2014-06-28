@@ -1,0 +1,24 @@
+ru:
+  patients:
+    index:
+      new: "Добавить пациента"
+      sort_by_name: "Сортировать по имени"
+      sort_by_date: "Сортировать по дате"
+      unlist: "Убрать из списка"
+      birth_year: "%{year} г.р."
+    edit:
+      title: "Редактировать данные пациента"
+    blood:
+      title: "Мониторинг артериального давления"
+    cardio:
+      title: "Мониторинг кардиограммы"
+    glucose:
+      title: "Мониторинг уровня сахара в крови"
+    temperature:
+      title: "Мониторинг температуры тела"
+    show:
+      to_patients_list: "К списку пациентов"
+      patient: "Пациент:"
+      age: "возраст:"
+      birth_year: "(%{year} г.р.)"
+      email: "e-mail:"

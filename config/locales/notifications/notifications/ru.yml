@@ -1,0 +1,5 @@
+ru:
+  notifications:
+    notifications:
+      create_success: "Уведомление добавлено."
+      update_success: "Уведомление обновлено."

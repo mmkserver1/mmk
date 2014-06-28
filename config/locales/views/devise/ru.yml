@@ -1,0 +1,30 @@
+ru:
+  devise:
+    passwords:
+      new:
+        title: "Восстановление пароля"
+        send_instructions: "Выслать инструкции по восстановлению"
+      edit:
+        title: "Сменить пароль"
+        new_password: "Новый пароль"
+        confirm_password: "Подтверждение пароля"
+        change_password: "Сменить пароль"
+    registrations:
+      new:
+        title: "Регистрация пациента в системе"
+      edit:
+        title: "Изменить данные пользователя"
+        current_password_info: "(требуется для подтверждения внесенных изменений)"
+        cancel_account: "Удалить аккаунт"
+        cancel_my_account: "Удалить мой аккаунт"
+    sessions:
+      new:
+        title: "Вход в систему"
+        email: "Адрес эл. почты"
+        password: "Пароль"
+        remember_me: "Запомнить меня"
+        submit: "Войти"
+    shared:
+      links:
+        registration: "Регистрация"
+        forgot_password: "Забыли ваш пароль?"

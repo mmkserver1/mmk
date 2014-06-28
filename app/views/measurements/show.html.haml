@@ -1,0 +1,5 @@
+.patient_content
+  %p#notice= notice
+  = render :partial => "measurements/#{collection_name}/item", :locals => {:item => @resource}
+  %div
+  = link_to t(:back), :back

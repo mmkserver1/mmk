@@ -1,0 +1,12 @@
+.patient_content
+  %h1= t(".title_#{collection_name}")
+  %div{:style => "height:20px"}
+  %table.patient_measurements
+    = render :partial => "measurements/#{collection_name}/table_header"
+    = render :partial => "measurements/#{collection_name}/item", :collection => @collection.reverse
+  %br/
+  = link_to t(:new), current_user.is_patient? ? [:new, :measurements, resource_name] : [:new, current_user_or_patient, :measurements, resource_name]
+  |
+  = link_to t(".delete_all"), "#{collection_name}/all", :confirm => t(:confirmation), :method => :delete
+  |
+  = link_to t(:back), :back

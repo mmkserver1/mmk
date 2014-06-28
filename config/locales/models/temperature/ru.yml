@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        measurements/temperature:
+          attributes:
+
+    models:
+      measurements/temperature: "Температура тела"
+
+    attributes:
+      measurements/temperature:
+        measured_at: "Время измерения"
+        value: "Температура тела"

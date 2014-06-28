@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    errors:
+      models:
+        measurements/temperature:
+          attributes:
+
+    models:
+      measurements/temperature: "Body Temperature"
+
+    attributes:
+      measurements/temperature:
+        measured_at: "Measured at"
+        value: "Body Temperature"

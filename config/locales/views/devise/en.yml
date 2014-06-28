@@ -1,0 +1,30 @@
+en:
+  devise:
+    passwords:
+      new:
+        title: "Reset Password"
+        send_instructions: "Send password reset instructions"
+      edit:
+        title: "Change My Password"
+        new_password: "New Password"
+        confirm_password: "Confirm Password"
+        change_password: "Change Password"
+    registrations:
+      new:
+        title: "Patient Registration"
+      edit:
+        title: "Edit user data"
+        current_password_info: "(have to provide for changes take effect)"
+        cancel_account: "Cancel Account"
+        cancel_my_account: "Cancel My Account"
+    sessions:
+      new:
+        title: "Sign In"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember Me"
+        submit: "Enter"
+    shared:
+      links:
+        registration: "Registration"
+        forgot_password: "Forgot your password?"

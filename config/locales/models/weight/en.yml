@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    errors:
+      models:
+        measurements/weight:
+          attributes:
+
+    models:
+      measurements/weight: "Weight"
+
+    attributes:
+      measurements/weight:
+        value: "Weight"
+        unit: "Measurement units"
+        measured_at: "Measured at"

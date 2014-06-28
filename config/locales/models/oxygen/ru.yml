@@ -1,0 +1,15 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        measurements/oxygen:
+          attributes:
+
+    models:
+      measurements/oxygen: "Содержание кислорода в крови"
+
+    attributes:
+      measurements/oxygen:
+         spo2: "Содержание кислорода"
+         pulse: "Пульс"
+         measured_at: "Время измерения"

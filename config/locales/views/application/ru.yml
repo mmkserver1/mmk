@@ -1,0 +1,15 @@
+ru:
+  application:
+    language:
+      ru: "Русский"
+      en: "English"
+    user_bar:
+      doctor: "Врач"
+      edit: "Редактировать профиль"
+      logout: "Выйти из системы"
+    footer:
+      main: "Главная"
+      download: "Загрузить"
+      about: "О проекте"
+      privacy: "Приватность"
+      contacts: "Конактная информация"

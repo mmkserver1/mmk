@@ -1,0 +1,10 @@
+.patient_content
+  %h1= t(".title")
+  %div{:style => "text-align:left;margin-left:20px"}
+    %ul
+      %li= link_to t(".cardio"), measurements_cardiograms_path
+      %li= link_to t(".bloodpressure"), measurements_bloodpressures_path
+      %li= link_to t(".temperature"), measurements_temperatures_path
+      %li= link_to t(".glucose"), measurements_glucoses_path
+      %li= link_to t(".oxygen"), measurements_oxygens_path
+      %li= link_to t(".weight"), measurements_weights_path

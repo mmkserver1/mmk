@@ -1,0 +1,5 @@
+%thead
+  %tr
+    - %w(measured_at spo2 pulse).each do |attr|
+      %th= Measurements::Oxygen.human_attribute_name(attr)
+    %th

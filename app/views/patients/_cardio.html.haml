@@ -1,0 +1,19 @@
+.measurements_info_top
+.measurements_info_middle
+  %div{:style => "float:left;position:absolute;top:-15px;left:140px;"}
+    = image_tag "periph-pict_kardiometer_72.png"
+  .measurements_info_tile= t(".title")
+  %div{:style => "height:40px"}
+  - if @cardio=@patient.cardiograms.last
+    %div= @cardio.measured_at ? l(@cardio.measured_at, :format => :short) : "-"
+    - cardiograms = (1..4).select { |i| @cardio.cardiogram?(i) }
+    - cardiograms.each do |i|
+      %div{:id => "cardiogram_graph_#{i}_#{@cardio.id}", :style => "width:705px;height:200px"}
+      :javascript
+        $.plot($("#cardiogram_graph_#{i}_#{@cardio.id}"),[
+          {color:"blue",data: #{@cardio.cardiogram(i).to_json},lines: { show: true }, points: { show: false }}],
+          {series: { shadowSize: 0 },zoom: {interactive: false}, pan: {interactive: true}, yaxis:{ min:1500, max:2500,  tickSize: 20, tickFormatter:function (val,axis){return '';}},xaxis:{ tickSize: 40, tickFormatter:function (val,axis){return '';} } }
+        );
+  = link_to t(:measurement_history), patient_measurements_cardiograms_path(@patient)
+  .clear
+.measurements_info_bottom

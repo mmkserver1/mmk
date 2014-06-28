@@ -1,0 +1,14 @@
+en:
+  measurements:
+    index:
+      title_bloodpressures: "Bloodpressure measurements list"
+      title_cardiograms: "Cardiogram measurements list"
+      title_glucoses: "Glucoses measurements list"
+      title_oxygens: "Oxygen saturation measurements list"
+      title_temperatures: "Temperature measurements list"
+      title_weights: "Weight measurements list"
+      delete_all: "Delete All"
+    new:
+      title: "Create %{measurement}"
+    edit:
+      title: "Edit %{measurement}"

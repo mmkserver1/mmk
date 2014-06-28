@@ -1,0 +1,12 @@
+en:
+  home:
+    doctor:
+      title: "Your patients"
+    patient:
+      title: "Your measurements"
+      cardio: "Cardiogram"
+      bloodpressure: "Blood pressure"
+      temperature: "Body Temperature"
+      glucose: "Glucose"
+      oxygen: "Oxygen Saturation"
+      weight: "Weight"

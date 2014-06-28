@@ -1,0 +1,7 @@
+%div{:style => "top:45px;width:570px;position:absolute;left:120px;font-size:22px;text-align:center;"}
+  - if current_user
+    - if current_user.is_doctor?
+      %span{:style => "font-weight:bold"}= "#{t(".doctor")}:"
+    = current_user.to_s
+    %span{:style => "font-size:14px"}
+      ( #{link_to t(".edit"), edit_user_registration_path} | #{link_to t(".logout"), destroy_user_session_path} )

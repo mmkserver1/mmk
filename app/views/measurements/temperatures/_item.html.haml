@@ -1,0 +1,10 @@
+%tbody
+  %tr
+    %td= l(item.measured_at, :format => :long)
+    %td
+      = item.value_in(:C).round 1
+      C&deg;
+    %td
+      = link_to t(:edit), current_user.is_patient? ? [:edit, item] : [:edit, current_user_or_patient, item]
+      |
+      = link_to t(:destroy), current_user.is_patient? ? item : [current_user_or_patient, item], :confirm => t(:confirmation), :method => :delete

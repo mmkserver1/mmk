@@ -1,0 +1,2 @@
+- locales = %w(en ru).inject([]) { |sum, l| sum << [t(".#{l}"), url_for(:locale => l)] }
+= select :languages, :language, locales, {:selected => url_for(:locale => I18n.locale)}, {:id => "locale_selector"}

@@ -1,0 +1,15 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        measurements/weight:
+          attributes:
+
+    models:
+      measurements/weight: "Вес тела"
+
+    attributes:
+      measurements/weight:
+         value: "Вес"
+         unit: "Единицы измерения"
+         measured_at: "Время измерения"

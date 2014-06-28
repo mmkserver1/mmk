@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title= t(:site_name)
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body{:style => "min-width:768px"}
+    .container_12{:style => "width:768px"}
+      .grid_12{:style => "width:768px"}
+        .site_header
+          = link_to_unless_current (image_tag "Heart-glass-logo_72.png", :style=>"position:absolute;left:30px"), root_path
+          %div{:style => "top:3px;left:186px;position:absolute;text-align:center;color:#6accab;font-size:25px;"}
+            =t(:site_name)
+          -#%div{:style => "float:right;"}
+          -#  = render "language"
+          = render "user_bar"
+        .content_frame
+          = yield
+        = render "footer"
+      .clear
+    %br/

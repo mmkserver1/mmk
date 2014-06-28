@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    errors:
+      models:
+        bloodpressure_threshold:
+          attributes:
+
+    models:
+      bloodpressure_threshold: "Bloodpressure Threshold"
+
+    attributes:
+      bloodpressure_threshold:
+        high_sys: "High Sys."
+        low_sys: "Low. Sys."
+        high_dia: "High Dia."
+        low_dia: "Low Dia."
+        high_pulse: "High Pulse"
+        low_pulse: "Low Pulse"

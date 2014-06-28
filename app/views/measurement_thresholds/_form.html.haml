@@ -1,0 +1,8 @@
+= form_for [@patient, @measurement_threshold] do |f|
+  - if @measurement_threshold.errors.any?
+    #error_explanation
+      %ul
+        - @measurement_threshold.errors.full_messages.each do |msg|
+          %li= msg
+  .actions
+    = f.submit

@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    errors:
+      models:
+        glucose_threshold:
+          attributes:
+
+    models:
+      glucose_threshold: "Glucose Threhsolds"
+
+    attributes:
+      glucose_threshold:
+        high: "High"
+        low: "Low"

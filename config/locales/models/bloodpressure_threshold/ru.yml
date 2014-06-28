@@ -1,0 +1,18 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        bloodpressure_threshold:
+          attributes:
+
+    models:
+      bloodpressure_threshold: "Граничные показатели артериального давления"
+
+    attributes:
+      bloodpressure_threshold:
+        high_sys: "Верхн. сист."
+        low_sys: "Нижн. сист."
+        high_dia: "Верхн. диаст."
+        low_dia: "Нижн. диаст."
+        high_pulse: "Верхн. ЧСС"
+        low_pulse: "Нижн. ЧСС"

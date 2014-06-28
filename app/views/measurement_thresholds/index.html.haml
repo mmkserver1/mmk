@@ -1,0 +1,12 @@
+%h1= t(".title")
+%table
+  %tr
+    %th
+    %th
+    %th
+  - @measurement_thresholds.each do |mt|
+    %tr
+      %td= link_to t(:show), [@patient, mt]
+      %td= link_to t(:edit), [:edit, @patient, mt]
+      %td= link_to t(:destroy), [@patient, mt], :confirm => t(:confirmation), :method => :delete
+%br/

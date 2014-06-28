@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b= @notification.class.human_attribute_name(:desc)
+  = @notification.desc
+%p
+  %b= @notification.class.human_attribute_name(:level)
+  = @notification.level
+%p
+  %b= @notification.class.human_attribute_name(:patient)
+  = @notification.patient
+%p
+  %b= @notification.class.human_attribute_name(:doctor)
+  = @notification.doctor
+= link_to t(:edit), edit_notification_path(@notification)
+|
+= link_to t(:back), notifications_path

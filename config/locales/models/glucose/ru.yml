@@ -1,0 +1,18 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        measurements/glucose:
+          attributes:
+
+    models:
+      measurements/glucose: "Содержание сахара в крови"
+
+    attributes:
+      measurements/glucose:
+        measured_at: "Время измерения"
+        value: "Уровень сахара"
+        state: "Относительно приема пищи"
+        state_after_meals: "После еды"
+        state_before_meals: "До еды"
+        state_unknown: "Неизвестно"

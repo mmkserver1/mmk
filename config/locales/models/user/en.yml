@@ -1,0 +1,28 @@
+en:
+  activerecord:
+    errors:
+      messages:
+      models:
+        user:
+          attributes:
+            email:
+              taken: ' %{value} already have been taken'
+              blank: 'should be provided'
+            password:
+              too_short: "is too short"
+              blank: "should be provided"
+    models:
+      user:
+      patient: "patient"
+    attributes:
+      user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        birthday: "Birthday"
+        first_name: "Name"
+        middle_name: "Patronimic"
+        last_name: "Surname"
+        gender: "Gender"
+        phone: "Phone"
+        current_password: "Current Password"

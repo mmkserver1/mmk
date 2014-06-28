@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        measurements/bloodpressure:
+          attributes:
+
+    models:
+      measurements/bloodpressure: "Артериальное давление"
+
+    attributes:
+      measurements/bloodpressure:
+         max: "Систолическое"
+         min: "Диастолическое"
+         pulse: "Пульс"
+         measured_at: "Время измерения"

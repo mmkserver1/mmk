@@ -1,0 +1,5 @@
+%thead
+  %tr
+    - %w(measured_at value unit).each do |attr|
+      %th= Measurements::Weight.human_attribute_name(attr)
+    %th

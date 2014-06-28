@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        notification:
+          attributes:
+
+    models:
+      notification: "Уведомление"
+
+    attributes:
+      notification:
+         desc: "Описание"
+         doctor: "Доктор"
+         level: "Уровень"
+         patient: "Пациент"

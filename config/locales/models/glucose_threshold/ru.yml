@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        glucose_threshold:
+          attributes:
+
+    models:
+      glucose_threshold: "Граничные показатели сахара крови"
+
+    attributes:
+      glucose_threshold:
+        high: "Верхний порог"
+        low: "Нижний порог"

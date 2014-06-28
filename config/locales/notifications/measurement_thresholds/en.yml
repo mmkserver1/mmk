@@ -1,0 +1,5 @@
+en:
+  notifications:
+    measurement_thresholds:
+      create_success: "Measurement thresholds was successfully created."
+      update_success: "Measurement thresholds was successfully updated."

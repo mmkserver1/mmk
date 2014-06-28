@@ -1,0 +1,9 @@
+%tbody
+  %tr
+    %td= l(item.measured_at || item.created_at, :format => :long)
+    %td= item.spo2
+    %td= item.pulse
+    %td
+      = link_to t(:edit), current_user.is_patient? ? [:edit, item] : [:edit, current_user_or_patient, item]
+      |
+      = link_to t(:destroy), current_user.is_patient? ? item : [current_user_or_patient, item], :confirm => t(:confirmation), :method => :delete

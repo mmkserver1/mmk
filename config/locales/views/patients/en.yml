@@ -1,0 +1,24 @@
+en:
+  patients:
+    index:
+      new: "Add Patient"
+      sort_by_name: "Sort by name"
+      sort_by_date: "Sort by date"
+      birth_year: "%{year} DOB"
+      unlist: "Remove from list"
+    edit:
+      title: "Edit Patient Data"
+    blood:
+      title: "Blood Pressure Monitoring"
+    cardio:
+      title: "Cardiogram Monitoring"
+    glucose:
+      title: "Glucose Monitoring"
+    temperature:
+      title: "Body Temperature Monitoring"
+    show:
+      to_patients_list: "Back to patients list"
+      patient: "Patient:"
+      age: "age:"
+      birth_year: "(%{year} DOB)"
+      email: "e-mail:"

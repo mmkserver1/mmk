@@ -1,0 +1,41 @@
+.measurements_info_top
+.measurements_info_middle
+  %div{:style => "float:left;position:absolute;top:-15px;left:140px;"}
+    = image_tag "periph-pict_termometer_72.png"
+  .measurements_info_tile= t(".title")
+  %div{:style => "height:20px"}
+  %table.measurements_table
+    %thead
+      %tr
+        - %w(measured_at value).each do |attr|
+          %td= Measurements::Temperature.human_attribute_name(attr)
+    %tbody
+    - @patient.temperatures.order("measured_at desc").limit(10).each do |t|
+      %tr
+        %td= t.measured_at ? l(t.measured_at, :format => :short) : "-"
+        %td= t.value
+  = link_to t(:measurement_history), patient_measurements_temperatures_path(@patient)
+  #temperatures_graph{:style => "width:705px;height:300px"}
+  .clear
+  %div{:style => "height:20px"}
+  %table#temperature_thresholds
+    %thead
+      %tr
+        - %w(measured_at high low).each do |attr|
+          %th= TemperatureThreshold.human_attribute_name(attr)
+    %tbody
+      = render @temperature_thresholds
+  %div
+    = form_for [@patient, TemperatureThreshold.new], :remote =>true do |f|
+      = f.label :high
+      = f.number_field :high, :size =>4,:step=>0.1
+      = f.label :low
+      = f.number_field :low, :size =>4,:step=>0.1
+      = f.submit t(:add), :disable_with=>t(:adding)
+  .clear
+.measurements_info_bottom
+:javascript
+  $(function () {
+    var measureData={color: 3, label: "#{j Measurements::Temperature.human_attribute_name(:value)}", data:#{get_temperatures_graph_data.to_json},lines: { show: true }, points: { show: true }};
+    application.plotTemperature(measureData, #{@patient.id});
+  });

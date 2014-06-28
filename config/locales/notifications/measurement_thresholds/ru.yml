@@ -1,0 +1,5 @@
+ru:
+  notifications:
+    measurement_thresholds:
+      create_success: "Границы измерений добавлены."
+      update_success: "Границы измерений обновлены."

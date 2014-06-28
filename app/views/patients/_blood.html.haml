@@ -1,0 +1,57 @@
+.measurements_info_top
+.measurements_info_middle
+  %div{:style => "float:left;position:absolute;top:-15px;left:140px;"}
+    = image_tag "periph-pict_tonometer_72.png"
+  .measurements_info_tile= t(".title")
+  %div{:style => "height:40px"}
+  %table.measurements_table
+    %thead
+      %tr
+        - %w(measured_at max min pulse).each do |attr|
+          %td= Measurements::Bloodpressure.human_attribute_name(attr)
+    %tbody
+      - @patient.bloodpressures.order("measured_at desc").limit(10).each do |b|
+        %tr
+          %td= b.measured_at ? l(b.measured_at, :format => :short) : "-"
+          %td= b.max
+          %td= b.min
+          %td= b.pulse
+  = link_to t(:measurement_history), patient_measurements_bloodpressures_path(@patient)
+  #bloodpressures_graph{:style => "width:705px;height:300px"}
+  .clear
+  %div{:style => "height:40px"}
+  %table#bloodpressure_thresholds
+    %thead
+      %tr
+        - %w(measured_at high_sys low_sys high_dia low_dia high_pulse low_pulse).each do |attr|
+          %th= BloodpressureThreshold.human_attribute_name(attr)
+    %tbody
+      = render @bloodpressure_thresholds
+  %div
+    = form_for [@patient, BloodpressureThreshold.new], :remote =>true do |f|
+      = f.label :high_sys
+      = f.number_field :high_sys, :size =>4,:step=>10
+      = f.label :high_dia
+      = f.number_field :high_dia, :size =>4,:step=>10
+      = f.label :high_pulse
+      = f.number_field :high_pulse, :size =>4,:step=>10
+      %br
+      = f.label :low_sys
+      = f.number_field :low_sys, :size =>4,:step=>10
+      = f.label :low_dia
+      = f.number_field :low_dia, :size =>4,:step=>10
+      = f.label :low_pulse
+      = f.number_field :low_pulse, :size =>4,:step=>10
+      %br
+      = f.submit t(:add), :disable_with=>t(:adding)
+  .clear
+.measurements_info_bottom
+:javascript
+  $(function () {
+    var measureData=[
+      {label: "#{j Measurements::Bloodpressure.human_attribute_name(:max)}",  data: #{get_blood_graph_data(1).to_json},lines: { show: true }, points: { show: true }},
+      {label: "#{j Measurements::Bloodpressure.human_attribute_name(:min)}", data: #{get_blood_graph_data(0).to_json},lines: { show: true }, points: { show: true }},
+      {label: "#{j Measurements::Bloodpressure.human_attribute_name(:pulse)}", data: #{get_blood_graph_data(2).to_json},lines: { show: true }, points: { show: true }}
+    ];
+    application.plotBloodpressure(measureData, #{@patient.id});
+  });

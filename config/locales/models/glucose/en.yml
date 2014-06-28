@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    errors:
+      models:
+        measurements/glucose:
+          attributes:
+
+    models:
+      measurements/glucose: "Glucose"
+
+    attributes:
+      measurements/glucose:
+        measured_at: "Measured at"
+        value: "Glucose Level"
+        state: "Meals"
+        state_after_meals: "After Meals"
+        state_before_meals: "Before Meals"
+        state_unknown: "Unknown"
+

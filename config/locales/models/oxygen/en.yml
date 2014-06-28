@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    errors:
+      models:
+        measurements/oxygen:
+          attributes:
+
+    models:
+      measurements/oxygen: "Oxygen"
+
+    attributes:
+      measurements/oxygen:
+        spo2: "Oxygen saturation"
+        pulse: "Pulse"
+        measured_at: "Measured at"

@@ -1,0 +1,8 @@
+ru:
+  notifications:
+    index:
+      title: "Список уведомлений"
+    new:
+      title: "Создать уведомление"
+    edit:
+      title: "Редактировать уведомление"

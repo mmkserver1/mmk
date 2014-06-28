@@ -1,0 +1,5 @@
+ru:
+  notifications:
+    measurements:
+      create_success: "Измерение добавлено."
+      update_success: "Измерение обновлено."

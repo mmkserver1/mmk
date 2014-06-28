@@ -1,0 +1,15 @@
+en:
+  application:
+    language:
+      ru: "Русский"
+      en: "English"
+    user_bar:
+      doctor: "Doctor"
+      edit: "Edit Profile"
+      logout: "Logout"
+    footer:
+      main: "Main"
+      download: "Download"
+      about: "About"
+      privacy: "Privacy Policy"
+      contacts: "Contacts"

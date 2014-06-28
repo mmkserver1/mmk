@@ -1,0 +1,8 @@
+en:
+  measurement_thresholds:
+    index:
+      title: "Measurement Thresholds List"
+    new:
+      title: "Create %{threshold}"
+    edit:
+      title: "Edit %{threshold}"

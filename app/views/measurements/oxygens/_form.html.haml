@@ -1,0 +1,20 @@
+= form_for [@patient, @resource] do |f|
+  - if @resource.errors.any?
+    #error_explanation
+      %ul
+        - @resource.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :spo2
+    %br/
+    = f.text_field :spo2, :size => 4
+  .field
+    = f.label :pulse
+    %br/
+    = f.text_field :pulse, :size => 4
+  .field
+    = f.label :measured_at
+    %br/
+    = f.text_field :measured_at, :size => 15
+  .actions
+    = f.submit

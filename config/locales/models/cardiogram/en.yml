@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    errors:
+      models:
+        measurements/cardiogram:
+          attributes:
+
+    models:
+      measurements/cardiogram: "ECG"
+
+    attributes:
+      measurements/cardiogram:
+         ecg_file: "ECG file"
+         measured_at: "Measured At"

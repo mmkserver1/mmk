@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        measurements/cardiogram:
+          attributes:
+
+    models:
+      measurements/cardiogram: "ЭКГ"
+
+    attributes:
+      measurements/cardiogram:
+         ecg_file: "Файл кардиограммы"
+         measured_at: "Время измерения"

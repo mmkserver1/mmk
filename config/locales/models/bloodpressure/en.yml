@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    errors:
+      models:
+        measurements/bloodpressure:
+          attributes:
+
+    models:
+      measurements/bloodpressure: "Bloodpressure"
+
+    attributes:
+      measurements/bloodpressure:
+        max: "Systolic"
+        min: "Diastolic"
+        pulse: "Pulse"
+        measured_at: "Measured at"

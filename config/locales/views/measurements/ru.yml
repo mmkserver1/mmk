@@ -1,0 +1,14 @@
+ru:
+  measurements:
+    index:
+      title_bloodpressures: "Список измерений артериального давления"
+      title_cardiograms: "Список измерений ЭКГ"
+      title_glucoses: "Список измерений содержания сахара в крови"
+      title_oxygens: "Список измерений содержания кислорода в крови"
+      title_temperatures: "Список измерения температуры"
+      title_weights: "Список измерения веса тела"
+      delete_all: "Удалить все"
+    new:
+      title: "Создать %{measurement}"
+    edit:
+      title: "Редактировать %{measurement}"

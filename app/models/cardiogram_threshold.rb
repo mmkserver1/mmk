@@ -1,0 +1,3 @@
+class CardiogramThreshold < MeasurementThreshold
+end
+

@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    errors:
+      models:
+        temperature_threshold:
+          attributes:
+
+    models:
+      temperature_threshold: "Body Temperature Thresholds"
+
+    attributes:
+      temperature_threshold:
+        high: "High"
+        low: "Low"

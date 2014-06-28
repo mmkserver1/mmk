@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        temperature_threshold:
+          attributes:
+
+    models:
+      temperature_threshold: "Граничные показатели температуры тела"
+
+    attributes:
+      temperature_threshold:
+        high: "Верхний порог"
+        low: "Нижний порог"

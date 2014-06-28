@@ -1,0 +1,5 @@
+en:
+  notifications:
+    measurements:
+      create_success: "Measurement was successfully created."
+      update_success: "Measurement was successfully updated."

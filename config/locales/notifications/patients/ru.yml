@@ -1,0 +1,5 @@
+ru:
+  notifications:
+    patients:
+      create_success: "Пациент добавлен."
+      update_success: "Данные пациента обновлены."

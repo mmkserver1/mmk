@@ -1,0 +1,5 @@
+%thead
+  %tr
+    - %w(measured_at value).each do |attr|
+      %th= Measurements::Temperature.human_attribute_name(attr)
+    %th

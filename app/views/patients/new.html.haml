@@ -1,0 +1,25 @@
+%div{:style => "height:14px"}
+%div{:style => "margin-left:30px;"}
+  = link_to patients_path, :style => "text-decoration:none" do
+    .default_button= t(:back)
+.patient_list.add
+  - @patients.each do |patient|
+    = link_to enroll_patient_path(patient), :style =>"text-decoration:none;color:#000" do
+      .patient_list_row{:onclick => "$(this).css('background','#adffe4')"}
+        .patient_list_image_box
+          = image_tag 'default_avatar_male_120x160.png' ,:width=>54, :height=>74
+        .patient_list_info_box
+          = patient
+          %br/
+          = patient.birthday.try(:year)
+          г.р.
+          %div{:style => "font-size:16px"}
+            = patient.bloodpressures.order('measured_at desc').first
+        .patient_list_action_box{:style => ""}= t(:add)
+  :javascript
+    $(function () {
+      $('.patient_list_row').hover(function(){
+        $(this).find('.patient_list_action_box').toggle();
+      })
+    });
+    

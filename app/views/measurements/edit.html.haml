@@ -1,0 +1,6 @@
+.patient_content
+  %h1= t(".title", :measurement => @resource.class.model_name.human.mb_chars.downcase.to_s)
+  = render "measurements/#{collection_name}/form"
+  = link_to t(:show), @resource
+  |
+  = link_to t(:back), :back

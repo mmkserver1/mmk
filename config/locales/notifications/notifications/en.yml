@@ -1,0 +1,5 @@
+en:
+  notifications:
+    notifications:
+      create_success: "Notification was successfully created."
+      update_success: "Notification was successfully updated."
