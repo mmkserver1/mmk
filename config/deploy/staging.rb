@@ -5,7 +5,7 @@ set :rvm_type, :system
 
 set :deploy_to, "/var/www/lifon/data/www/test.life4n.com/#{application}"
 set :rails_env, "staging"
-set :branch, "mmk"
+set :branch, "master"
 
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn/#{rails_env}.rb"
 set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"

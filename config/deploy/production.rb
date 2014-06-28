@@ -1,13 +1,13 @@
 require "whenever/capistrano"
 
-set :application, "mmk"
+set :application, "health"
 
 set :rvm_ruby_string, '1.9.3'
 set :rvm_type, :user
 
-set :deploy_to, "/srv/#{application}"
+set :deploy_to, "/var/www/lifon/data/www/test.life4n.com/#{application}"
 set :rails_env, "production"
-set :branch, "mmk"
+set :branch, "master"
 set :deploy_via, :remote_cache
 
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn/#{rails_env}.rb"

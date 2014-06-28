@@ -1,4 +1,4 @@
-deploy_to  = "/var/www/health"
+deploy_to  = "/var/www/lifon/data/www/test.life4n.com/health"
 rails_root = "#{deploy_to}/current"
 pid_file   = "#{deploy_to}/shared/pids/unicorn.pid"
 log_file   = "#{rails_root}/log/unicorn.log"
